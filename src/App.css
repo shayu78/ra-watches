@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.component__wrapper {
+  width: 900px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.list__items {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.list__item {
+  margin-right: 30px;
+  height: 330px;
+}
+
+.list__item:last-child {
+  margin-right: 0;
+}
+
+.form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.form__input__container {
+  width: 200px;
+  margin-right: 30px;
+}
+
+.form__label {
+  margin-left: 10px;
+}
+
+.form__input {
+  width: 100%;
+  padding: 5px;
+  outline: 0;
+  border: 1px solid #000000;
+  margin-top: 10px;
+}
+
+.form__button {
+  width: 100px;
+  padding: 5px;
+  outline: 0;
+  border: 1px solid #000000;
+}
+
+.top__clock__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.clock__city {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.clock__delete {
+  align-self: flex-end;
+  margin-right: 10px;
+  cursor: default;
+  padding: 0 5px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.clock {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('./images/clock.png');
+  background-size: cover;
+}
+
+.clock:before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+.hour__hand, .minute__hand, .second__hand {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hour__hand {
+  width: 120px;
+  height: 120px;
+}
+
+.minute__hand {
+  width: 150px;
+  height: 150px;
+}
+
+.second__hand {
+  width: 182px;
+  height: 182px;
+}
+
+.hour__hand:before {
+  content: '';
+  width: 4px;
+  height: 60px;
+  background-color: #000000;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+.minute__hand:before {
+  content: '';
+  width: 3px;
+  height: 85px;
+  background-color: #000000;
+  z-index: 11;
+  border-radius: 5px;
+}
+
+.second__hand:before {
+  content: '';
+  width: 2px;
+  height: 100px;
+  background-color: #000000;
+  z-index: 12;
+  border-radius: 5px;
+}
+
+.bottom__clock__info {
+  text-align: center;
+}
+
+.clock__timezone {
+  text-decoration: underline;
+}
+
+.clock__humandate {
+  text-decoration: underline;
+}
