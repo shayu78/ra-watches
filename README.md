@@ -1,5 +1,4 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/d8igrh06ivrflg5s?svg=true)](https://ci.appveyor.com/project/shayu78/ra-watches)
-master branch status badge
 Мировые часы
 ===
 
