@@ -8,9 +8,9 @@ export default class Clock extends Component {
     super(props);
 
     this.state = {
-      currentHour: 0,
-      currentMinute: 0,
-      currentSecond: 0,
+      currentHourDegree: 0,
+      currentMinuteDegree: 0,
+      currentSecondDegree: 0,
       dateTime: '',
     };
 
@@ -19,15 +19,15 @@ export default class Clock extends Component {
 
   render() {
     const secondsStyle = {
-      transform: `rotate(${this.state.currentSecond}deg)`,
+      transform: `rotate(${this.state.currentSecondDegree}deg)`,
     }
 
     const minutesStyle = {
-      transform: `rotate(${this.state.currentMinute}deg)`,
+      transform: `rotate(${this.state.currentMinuteDegree}deg)`,
     }
 
     const hoursStyle = {
-      transform: `rotate(${this.state.currentHour}deg)`,
+      transform: `rotate(${this.state.currentHourDegree}deg)`,
     }
 
     return (
@@ -42,8 +42,7 @@ export default class Clock extends Component {
           <div style={secondsStyle} className="second__hand"></div>
         </div>
         <div className="bottom__clock__info">
-          <p className="clock__timezone">UTC{this.props.item.timezone >= 0
-            ? `+${this.props.item.timezone}:00` : `${this.props.item.timezone}:00`}</p>
+          <p className="clock__timezone">UTC{this.getNumberWithSign(this.props.item.timezone)}:00</p>
           <p className="clock__humandate">{this.state.dateTime}</p>
         </div>
       </React.Fragment>
@@ -53,21 +52,26 @@ export default class Clock extends Component {
   setData() {
     const timeZone = parseInt(this.props.item.timezone);
     // const day = new Date();
-    // const currentHour = 30 * ((day.getUTCHours() + timeZone) + (1 / 60) * day.getUTCMinutes());
-    // const currentMinute = 6 * (day.getUTCMinutes() + (1 / 60) * day.getUTCSeconds());
-    // const currentSecond = day.getUTCSeconds() * 6;
+    // const currentHourDegree = 30 * ((day.getUTCHours() + timeZone) + (1 / 60) * day.getUTCMinutes());
+    // const currentMinuteDegree = 6 * (day.getUTCMinutes() + (1 / 60) * day.getUTCSeconds());
+    // const currentSecondDegree = day.getUTCSeconds() * 6;
 
     const day = moment().utc();
-    const currentHour = 30 * ((day.hour() + timeZone) + + (1 / 60) * day.minute());
-    const currentMinute = 6 * (day.minute() + (1 / 60) * day.second());
-    const currentSecond = day.second() * 6;
+    const currentHourDegree = 30 * ((day.hour() + timeZone) + + (1 / 60) * day.minute());
+    const currentMinuteDegree = 6 * (day.minute() + (1 / 60) * day.second());
+    const currentSecondDegree = day.second() * 6;
 
     this.setState({
-      currentHour,
-      currentMinute,
-      currentSecond,
+      currentHourDegree,
+      currentMinuteDegree,
+      currentSecondDegree,
       dateTime: day.add(timeZone, 'h').format('LL LTS'),
     });
+  }
+
+  getNumberWithSign(input) {
+    const sign = input < 0 ? '-' : '+';
+    return `${sign}${Math.abs(input)}`;
   }
 
   componentDidMount() {
