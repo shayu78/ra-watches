@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ra-watches/static/css/main.6f98504e.chunk.css",
+    "main.js": "/ra-watches/static/js/main.56eae437.chunk.js",
+    "main.js.map": "/ra-watches/static/js/main.56eae437.chunk.js.map",
+    "runtime-main.js": "/ra-watches/static/js/runtime-main.74960d00.js",
+    "runtime-main.js.map": "/ra-watches/static/js/runtime-main.74960d00.js.map",
+    "static/js/2.9ccf341b.chunk.js": "/ra-watches/static/js/2.9ccf341b.chunk.js",
+    "static/js/2.9ccf341b.chunk.js.map": "/ra-watches/static/js/2.9ccf341b.chunk.js.map",
+    "static/js/3.16fb8e5e.chunk.js": "/ra-watches/static/js/3.16fb8e5e.chunk.js",
+    "static/js/3.16fb8e5e.chunk.js.map": "/ra-watches/static/js/3.16fb8e5e.chunk.js.map",
+    "index.html": "/ra-watches/index.html",
+    "static/css/main.6f98504e.chunk.css.map": "/ra-watches/static/css/main.6f98504e.chunk.css.map",
+    "static/js/2.9ccf341b.chunk.js.LICENSE.txt": "/ra-watches/static/js/2.9ccf341b.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/ra-watches/static/media/clock.27e29c2c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.74960d00.js",
+    "static/js/2.9ccf341b.chunk.js",
+    "static/css/main.6f98504e.chunk.css",
+    "static/js/main.56eae437.chunk.js"
+  ]
+}
